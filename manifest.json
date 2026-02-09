@@ -3,10 +3,6 @@
   "name": "Netflix Household Bypass",
   "version": "1.0.0",
   "description": "Bypass Netflix Household restrictions and enjoy custom video controls",
-  "icons": {
-    "48": "icon.png",
-    "128": "icon.png"
-  },
   "content_scripts": [
     {
       "matches": ["*://*.netflix.com/*"],
