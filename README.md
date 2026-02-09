@@ -68,10 +68,4 @@ MIT License — feel free to modify and distribute.
 
 ---
 
-## 👨‍💻 Author
-
-**Ahmed Salah**
-
----
-
 **Made with ❤️ by Ahmed Salah**

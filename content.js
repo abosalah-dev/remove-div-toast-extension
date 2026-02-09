@@ -135,14 +135,18 @@
 
   /* ========== TOAST ========== */
 
-  function showToast(msg) {
+  function showToast(msg, showCredit = false) {
     let toast = document.getElementById("toast-bar");
     if (!toast) {
       toast = document.createElement("div");
       toast.id = "toast-bar";
       document.body.appendChild(toast);
     }
-    toast.innerHTML = `${msg}<div style="font-size:11px;opacity:0.6;margin-top:6px;">Made with ❤️ by Ahmed Salah</div>`;
+    if (showCredit) {
+      toast.innerHTML = `${msg}<div style="font-size:11px;opacity:0.6;margin-top:6px;">Made with ❤️ by Ahmed Salah</div>`;
+    } else {
+      toast.textContent = msg;
+    }
     toast.classList.add("show");
     clearTimeout(toast._t);
     toast._t = setTimeout(() => toast.classList.remove("show"), 2200);
@@ -159,7 +163,7 @@
         ) return;
 
         el.remove();
-        showToast("✅ Netflix block bypassed");
+        showToast("✅ Netflix block bypassed", true);
       });
     });
   }
@@ -175,6 +179,9 @@
   let btn, speedContainer, speedBar, speedValue, mouseTimer;
 
   function injectControls() {
+    // Only show controls on Netflix
+    if (!window.location.hostname.includes('netflix.com')) return;
+
     if (!btn) {
       btn = document.createElement("button");
       btn.id = "video-toggle-btn";
