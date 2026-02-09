@@ -12,7 +12,7 @@
 
   /* ========== STYLES ========== */
 
-  if (!document.getElementById("nf-helper-style")) {
+  if (document.head && !document.getElementById("nf-helper-style")) {
     const style = document.createElement("style");
     style.id = "nf-helper-style";
     style.textContent = `
@@ -31,6 +31,7 @@
         transition: all .3s ease;
         z-index: 999999;
         pointer-events: none;
+        text-align: center;
       }
       #toast-bar.show {
         opacity: 1;
@@ -136,6 +137,7 @@
   /* ========== TOAST ========== */
 
   function showToast(msg, showCredit = false) {
+    if (!document.body) return;
     let toast = document.getElementById("toast-bar");
     if (!toast) {
       toast = document.createElement("div");
@@ -169,10 +171,12 @@
   }
 
   removeTargets();
-  new MutationObserver(removeTargets).observe(document.body, {
-    childList: true,
-    subtree: true
-  });
+  if (document.body) {
+    new MutationObserver(removeTargets).observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  }
 
   /* ========== VIDEO CONTROLS ========== */
 
