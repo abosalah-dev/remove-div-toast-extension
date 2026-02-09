@@ -8,6 +8,14 @@ A Chrome extension that bypasses the **"Your device isn't part of the Netflix Ho
 
 ---
 
+## 🚫 The Problem
+
+This extension bypasses the following Netflix restriction:
+
+![Netflix Household Restriction](image.png)
+
+---
+
 ## ✨ Features
 
 ### 🔓 Household Bypass
