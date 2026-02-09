@@ -142,10 +142,10 @@
       toast.id = "toast-bar";
       document.body.appendChild(toast);
     }
-    toast.textContent = msg;
+    toast.innerHTML = `${msg}<div style="font-size:11px;opacity:0.6;margin-top:6px;">Made with ❤️ by Ahmed Salah</div>`;
     toast.classList.add("show");
     clearTimeout(toast._t);
-    toast._t = setTimeout(() => toast.classList.remove("show"), 1800);
+    toast._t = setTimeout(() => toast.classList.remove("show"), 2200);
   }
 
   /* ========== POPUP REMOVER ========== */

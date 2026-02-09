@@ -2,7 +2,7 @@
 
 A Chrome extension that bypasses the **"Your device isn't part of the Netflix Household for this account"** restriction and provides custom video controls.
 
-![Netflix](https://img.shields.io/badge/Netflix-E50914?style=for-the-badge&logo=netflix&logoColor=white)
+[![Netflix](https://img.shields.io/badge/Netflix-E50914?style=for-the-badge&logo=netflix&logoColor=white)](https://www.netflix.com)
 ![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
 ![Manifest V3](https://img.shields.io/badge/Manifest-V3-00C853?style=for-the-badge)
 
@@ -30,7 +30,7 @@ A Chrome extension that bypasses the **"Your device isn't part of the Netflix Ho
 2. Open your browser and go to `chrome://extensions/`
 3. Enable **Developer mode** (toggle in top-right)
 4. Click **Load unpacked**
-5. Select the `remove-div-toast-extension` folder
+5. Select the extension folder
 6. Done! ✅
 
 ---
@@ -56,30 +56,6 @@ The extension uses a **MutationObserver** to detect when Netflix injects the Hou
 
 ---
 
-## ⚙️ Customization
-
-### Change Target Selectors
-
-Edit the `selectorsToRemove` array in `content.js`:
-
-```javascript
-const selectorsToRemove = [
-  'div[role="dialog"]',
-  'div[data-uia="nf-modal-background"]',
-  'div.nf-modal.interstitial-full-screen'
-];
-```
-
-### Change Required Text
-
-Edit the `requiredText` array to target specific popups:
-
-```javascript
-const requiredText = ['Netflix Household'];
-```
-
----
-
 ## ⚠️ Disclaimer
 
 This extension is for **educational purposes only**. Use at your own risk. The developer is not responsible for any consequences of using this extension. Netflix may update their DOM structure at any time, which could affect functionality.
@@ -92,10 +68,10 @@ MIT License — feel free to modify and distribute.
 
 ---
 
-## 🤝 Contributing
+## 👨‍💻 Author
 
-Pull requests are welcome! For major changes, please open an issue first.
+**Ahmed Salah**
 
 ---
 
-**Made with ❤️ for uninterrupted streaming**
+**Made with ❤️ by Ahmed Salah**
